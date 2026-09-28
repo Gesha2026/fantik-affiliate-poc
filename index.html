@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fantik Affiliate Test</title>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 30px 20px;
+      text-align: center;
+      background: var(--tg-theme-bg-color, #ffffff);
+      color: var(--tg-theme-text-color, #111111);
+    }
+
+    .box {
+      max-width: 420px;
+      margin: 40px auto;
+      padding: 25px;
+      border: 1px solid #cccccc;
+      border-radius: 16px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    .ok {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>Fantik Affiliate Test</h1>
+    <p>Тестовый Telegram Mini App</p>
+    <div class="ok">✅ Mini App работает</div>
+  </div>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.ready();
+    tg.expand();
+  </script>
+</body>
+</html>
