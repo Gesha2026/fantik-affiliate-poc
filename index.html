@@ -3,19 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fantik Affiliate Test</title>
+  <title>Fantik Affiliate PoC</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 30px 20px;
       text-align: center;
+      padding: 40px 20px;
       background: var(--tg-theme-bg-color, #ffffff);
       color: var(--tg-theme-text-color, #111111);
     }
-
     .box {
       max-width: 420px;
       margin: 40px auto;
@@ -23,54 +20,19 @@
       border: 1px solid #cccccc;
       border-radius: 16px;
     }
-
-    button {
-      width: 100%;
-      padding: 15px;
-      margin-top: 20px;
-      font-size: 18px;
-      border: 0;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-
-    #status {
-      margin-top: 18px;
-    }
   </style>
 </head>
-
 <body>
   <div class="box">
-    <h1>Fantik Affiliate Test</h1>
-    <p>Тестовая покупка через Telegram Stars</p>
-    <p><strong>Цена: 5 ⭐</strong></p>
-
-    <button id="payButton">Купить за 5 ⭐</button>
-
-    <div id="status">Ожидание оплаты</div>
+    <h1>Fantik Affiliate PoC</h1>
+    <p>✅ Тест успешно завершён</p>
+    <p>Telegram Stars Affiliate подтверждён.</p>
   </div>
 
   <script>
     const tg = window.Telegram.WebApp;
     tg.ready();
     tg.expand();
-
-    const invoiceUrl = "https://t.me/$oV660spI2ElmHAAA57wJrAA9siA";
-    const statusEl = document.getElementById("status");
-
-    document.getElementById("payButton").addEventListener("click", () => {
-      statusEl.textContent = "Открываем оплату...";
-
-      tg.openInvoice(invoiceUrl, (status) => {
-        statusEl.textContent = "Статус: " + status;
-
-        if (status === "paid") {
-          tg.showAlert("Оплата прошла успешно");
-        }
-      });
-    });
   </script>
 </body>
 </html>
-
